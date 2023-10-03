@@ -1,0 +1,25 @@
+favicon.io
+use for making favicon for free
+using library texlluray js
+first make h1 and then h2 for capture life
+#page1>h5   ---->>>> jo dirct h5 hai page1 ke ander 
+@font-face {
+    font-family: ;
+    src: url();
+}      -------->>>>>  use to host font and use it in our css
+
+use line height
+min height 100vh so that smaller as 100vh butt max as mauch as
+futher we will use gsap pin propery
+
+
+
+navbar bannae ke baad 
+uske baad capture life wala using h1 and h2
+
+#page1>h1  ----->>>>  this means h1 inside page1 direct inside not in its sub element
+
+after create krne ne liye content dena jaruri rehta hai 
+you leave it blank also
+scopre resolution symbol laga ke after before create hota hai 
+h1::after   -------- syntax

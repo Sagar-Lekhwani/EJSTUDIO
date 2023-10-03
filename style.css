@@ -1,0 +1,495 @@
+@font-face {
+    font-family: Inter;
+    src: url(./fonts/Inter.ttf);
+}
+@font-face {
+    font-family: Ivy;
+    src: url(./fonts/ivy.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    color: #f5f5f5;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#cursor{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #e1e1e1;
+    position: absolute;
+    z-index: 9999;
+    transition: all ease-in-out 0.01s;
+    /* mix-blend-mode: difference; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3px;
+    color: #050505;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+#full-scr{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -100%;
+    transition: all ease-out 0.5s;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #0e0e0e;
+}
+
+#full-scr h1{
+    font-size: 10.5vw;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    font-family: Ivy;
+    line-height: 12vw;
+    font-weight: 100;
+    position: relative;
+}
+
+#full-scr h1::after{
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    background-color: #f5f5f5;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+
+}
+
+#full-scr h1:hover::after{
+    width: 100%;
+    cursor: pointer;
+}
+
+#loader{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    /* background-color: red; */
+}
+#loader #text-anime{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 600;
+    font-size: 30px;
+    color: #1a1a1a;
+    width: 28%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#loader h4{
+    color: #151515;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#loader h5{
+    color: #8a7f7f;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#text-anime #kuch-bhi{
+    /* background: red; */
+    height: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#loader1{
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #e1e1e1;
+    background-color: #f5f5f5;
+}
+
+#loader2{
+    background-color: #f5f5f5;
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #e1e1e1;
+}
+
+#loader3{
+    background-color: #f5f5f5;
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #e1e1e1;
+}
+
+#loader4{
+    background-color: #f5f5f5;
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #e1e1e1;
+}
+
+@keyframes load {
+    0%{
+        height: 100%;
+    }
+    100%{
+        height: 0;
+    }
+}
+
+#nav{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    padding: 0 55px;
+    position: fixed;
+    top: 50px;
+    z-index: 9999;
+}
+#nav h5{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#nav #menu{
+    height: 10px;
+    width: 30px;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu #line1{
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform-origin: 0 0;
+    transition: all ease 1s;
+}
+
+#menu #line2{
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transform-origin: 0 0;
+    transition: all ease 1s;
+}
+
+#bg{
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    padding-top: 110px;
+    background-color: #0e0e0e;
+}
+
+#bg p{
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
+
+#bg>h1{
+    /* color: red; */
+    text-align: center;
+    font-family: Ivy;
+    font-size: 21vw;
+    line-height: 19vw;
+    letter-spacing: 6px;
+    font-weight: 100;
+}
+
+#bg>h2{
+    /* color: red; */
+    text-align: center;
+    font-family: Inter;
+    font-size: 19.5vw;
+    line-height: 16vw;
+    letter-spacing: 6px;
+    font-weight: 500;
+}
+
+#main{
+    position: relative;
+    z-index: 99;
+    padding-top: 92vh;
+}
+
+#page1{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    /* padding-top: 110px;
+    padding-top: 92vh; */
+}
+
+#page1 #img{
+    height: 100vh;
+    width: 430px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0%);
+    margin-top: -10px;
+    background-image: url(./images/home.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#page2{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0e0e0e;
+    position: relative;
+    padding-top: 110px;
+}
+
+#page2 h1{
+    font-family: Ivy;
+    font-size: 5vw;
+    font-weight: 100;
+    text-align: center;
+}
+
+#page2 #elem{
+    background-color: #0e0e0e;
+    overflow: hidden;
+}
+
+#page3{
+    min-height: 90vh;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    
+}
+#page3 h1{
+    color: #050505;
+    font-size: 20vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 21vw;
+    font-family: Inter;
+}
+
+#page3 h2{
+    color: #0e0e0e;
+    font-size: 30vw;
+    line-height: 19vw;
+    text-transform: uppercase;
+    font-family: Ivy;
+    text-align: center;
+    font-weight: 100;
+}
+
+#page4{
+    width: 100%;
+    min-height: 200vh;
+    background-color: #050505;
+    position: relative;
+    padding: 40px 60px;
+}
+
+.box{
+    height: 750px;
+    width: 520px;
+    margin-top: 30px;
+    /* background-color: #fff; */
+
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#box2{
+    margin-top: 100px;
+    margin-left: 65%;
+}
+ 
+ #box1::after{
+    content: "Potrait";
+    font-size: 4vw;
+    /* margin-top: 10px; */
+    font-family: Ivy; 
+} 
+
+#box2::after{
+    font-family: Ivy;
+    content: "Architecture";
+    font-size: 4vw;
+    /* margin-top: 10px; */
+}
+
+#box3::after{
+    font-family: Ivy;
+    content: "Product";
+    font-size: 4vw;
+    /* margin-top: 10px; */
+}
+
+#page4 h3{
+    text-align: center;
+    margin-left: 49%;
+    margin-top: 10%;
+    border: 2px solid #f5f5f5;
+    border-radius: 50px;
+    height: 50px;
+    width: 10vw;
+    padding: 8px;
+    /* background-color: red; */
+    /* position: relative; */
+}
+
+
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -200vh;
+}
+
+#page5 h1{
+ font-size: 50vw;
+ color: #050505;
+ font-weight: 600;
+ transition: all ease-out 0.1s;
+ position: absolute;
+ font-family: Inter;
+ /* opacity: 0; */
+}
+
+#para{
+    width: 55%;
+    height: 70%;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#para h2{
+    color: #7d7d7d;
+    text-align: center;
+    font-size: 1vw;
+    margin-top: 35px;
+    word-spacing: 5px;
+    font-weight: 600;
+}
+
+#para p{
+    color: #7d7d7d;
+    width: 100%;
+    text-align: justify;
+    font-size: 0.9vw;
+    line-height: 40px;
+}
+
+#page6{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #050505;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-top: -10vh; */
+    /* padding: 70px 0px; */
+}
+
+#page6 h1{
+    font-size: 9.6vw;
+    font-family: Ivy;
+    font-weight: 200;
+    line-height: 140px;
+}
+
+#page6 #content1{
+    /* background-color: red; */
+    margin-top: 4%;
+    text-align: center;
+}
+
+#page6 #content3{
+    width: 100%;
+    height: 10%;
+    /* background-color: rgb(222, 8, 8); */
+    display: flex;
+    align-items: bottom;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+#page6 #content2{
+    /* background-color: red; */
+    margin-top: 20px;
+}
+
+#content3 #part1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+
+    /* background-color: red; */
+}
+
+#content3 #part2{
+    width: 25%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#content3 h4{
+    margin-left: -2%;
+    margin-bottom: 1%;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 2vw;
+}
+
+#content3 h5{
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+#content1 #elem{
+    overflow: hidden;
+    background-color: #050505;
+}
